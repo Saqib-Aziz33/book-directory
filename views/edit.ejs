@@ -1,0 +1,27 @@
+<form method="post" enctype="multipart/form-data" action="/<%=book._id%>?_method=PUT" class="form my-5">
+    <div class="my-5">
+        <h2>Edit <%= book.title %> </h2>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input required class="form-control" type="text" name="title" id="title" value="<%=book.title%>">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="author">Author</label>
+        <input required class="form-control" type="text" name="author" id="author" value="<%=book.author%>">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="publish">Publish date</label>
+        <input required class="form-control" type="text" name="publish" id="publish" placeholder="dd-mm-year" value="<%=book.publish%>">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="img">Change Cover</label>
+        <input style="max-width: 300px;" class="form-control" type="file" value="<%=book.img.path %> " name="img" id="img" onchange="loadFile(event)">
+        <img id="output" src="<%=book.img.path%>" width="200" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea required class="form-control" name="description" id="description" cols="30" rows="5"><%= book.description%></textarea>
+    </div>
+    <button class="btn btn-info" type="submit">Submit</button>
+</form>

@@ -1,0 +1,108 @@
+:root{
+    --clr-primary: #588b8b;
+}
+
+body{
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23588b8b' fill-opacity='0.1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/* bootstrap */
+.bg-info{
+    background-color: var(--clr-primary) !important;
+}
+.btn-info{
+    background-color: var(--clr-primary);
+    color: white;
+    border-color: var(--clr-primary);
+}
+.btn-info:hover{
+    background-color: white;
+}
+.btn-info:focus{
+    box-shadow: none !important;
+    border-color: black;
+    background-color: white;
+}
+
+/* nav */
+.nav-toggler{
+   position: absolute;
+   top: 10px;
+   left: 20px; 
+   font-size: 1.5rem;
+   color: white;
+}
+.offcanvas.offcanvas-start{
+    background-color: var(--clr-primary);
+}
+.offcanvas.offcanvas-start ul{
+    list-style: none;
+}
+.offcanvas.offcanvas-start ul a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+    padding: 12px 10px;
+    transition: all 0.5s ease;
+}
+.offcanvas.offcanvas-start ul a:hover{
+    transform: translateX(20px);
+}
+
+
+
+/* form */
+.form{
+    max-width: 800px;
+    margin: auto;
+}
+
+
+
+/* books */
+.books-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+.books-grid .child-book{
+    padding: 20px;
+}
+.books-grid img{
+    transition: all 0.5s ease;
+}
+.books-grid img:hover{
+    transform: scale(1.2);
+}
+
+/* add new */
+.add-new{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 10px;
+    display: block;
+    padding: 4rem;
+}
+
+
+
+
+@media only screen and (max-width: 990px){
+    .books-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .add-new{
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .books-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

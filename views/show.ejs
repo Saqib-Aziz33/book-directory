@@ -1,0 +1,12 @@
+<div class="my-5">
+    <img style="max-height: 300px;" src="<%= book.img.path %> " alt="">
+    <h1><%= book.title %> </h1>
+    <p><%= book.author %> </p>
+    <p><%= book.publish %> </p>
+    <small><%= book.description %> </small>
+    <hr>
+    <a class="btn btn-info" href="<%=book._id%>/edit">Edit</a>
+    <form class="d-inline" method="post" action="/<%=book._id%>?_method=DELETE">
+        <button class="btn btn-danger">delete</button>
+    </form>
+</div>
