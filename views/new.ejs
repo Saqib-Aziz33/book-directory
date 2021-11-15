@@ -1,30 +1,48 @@
-<form enctype="multipart/form-data" action="/" method="post" class="form my-5">
-    <div class="my-5">
-        <h2>Add new book</h2>
-    </div>
-    
-    <div class="mb-3 form-floating">
-        <input required class="form-control" type="text" name="title" id="title" placeholder="title">
-        <label for="title">Title</label>
-    </div>
-    <div class="mb-3 form-floating">
-        <input required class="form-control" type="text" name="author" id="author" placeholder="author name">
-        <label for="author">Author</label>
-    </div>
-    <div class="mb-3 form-floating">
-        <input required class="form-control" type="text" name="publish" id="publish" placeholder="dd-mm-year">
-        <label for="publish">Publish</label>
-    </div>
-    <div class="mb-3">
-        <label class="form-label" for="img">Book Cover</label>
-        <input style="max-width: 300px;" class="form-control" type="file" name="img" id="img" onchange="loadFile(event)">
-        <img id="output" width="200" />
-    </div>
-    <div class="mb-3">
-        <textarea required class="form-control" name="description" id="description" placeholder="Describe your book...." cols="30" rows="5"></textarea>
-        <!-- <label for="description">Description</label> -->
-    </div>
-    <button class="btn btn-info" type="submit">Submit</button>
-</form>
-
-
+<section class="container">
+    <form enctype="multipart/form-data" action="/" method="post" class="my-5">
+        <div class="my-5">
+            <h2>Add new book</h2>
+        </div>
+        
+        <section class="row">
+            <div class="col-sm-6">
+                <div class="mb-3 form-floating">
+                    <input required class="form-control" type="text" name="title" id="title" placeholder="title">
+                    <label for="title">Title</label>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mb-3 form-floating">
+                    <input required class="form-control" type="text" name="author" id="author" placeholder="author name">
+                    <label for="author">Author</label>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <textarea required class="form-control" name="description" id="description" placeholder="Describe your book...." cols="30" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mb-3 form-floating">
+                    <input required class="form-control" type="text" name="publish" id="publish" placeholder="dd-mm-year">
+                    <label for="publish">Published Date</label>
+                </div>
+            </div>
+            
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label class="form-label" for="img">Book Cover</label>
+                    <input class="form-control" type="file" name="img" id="img" onchange="loadFile(event)">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img id="output" width="200" />
+            </div>
+            
+            <div>
+                <button class="btn btn-info" type="submit">Submit</button>
+            </div>
+        </section>
+        
+    </form>
+</section>
